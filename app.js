@@ -152,7 +152,9 @@ function catnip(id) {
 
   clearKittens()
   saveKittens()
+  document.getElementById(Kitten.id).setAttribute('class',`p-1 kitten ${Kitten.mood}`)
 }
+
 
 /**
  * Sets the kittens mood based on its affection
@@ -170,8 +172,8 @@ function setKittenMood(Kitten) {
   if(Kitten.affection < 4){
     Kitten.mood = 'angry'
     kittens[Kitten.id] = Kitten}
- 
-  document.getElementById(Kitten.id).setAttribute('class',`p-1 kitten ${Kitten.mood}`)
+    
+    document.getElementById(Kitten.id).setAttribute('class',`p-1 kitten ${Kitten.mood}`)
 }
 
 function clearKittens(){
